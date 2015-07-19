@@ -1,0 +1,9 @@
+<resources>
+
+
+    <string-array name="sort_Criteria">
+        <item name="most_popular">Most popular</item>
+        <item name="highest_rated">Highest rated</item>
+    </string-array>
+
+</resources>
