@@ -1,5 +1,9 @@
 package example.nanodegree.movieapp;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +13,7 @@ import java.net.URL;
 
 public class Utils {
 
-   // private static String TAG = Utils.class.getSimpleName();
+    // private static String TAG = Utils.class.getSimpleName();
 
     /**
      * Returns String content from a url.
@@ -18,6 +22,9 @@ public class Utils {
 
         try {
             InputStream inputStream = new URL(url).openConnection().getInputStream();
+
+            if (inputStream == null)
+                return null;
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 
@@ -38,4 +45,16 @@ public class Utils {
         return null;
     }
 
+    public static boolean isInternetConnected(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] info = connectivity.getAllNetworkInfo();
+            if (info != null)
+                for (NetworkInfo anInfo : info)
+                    if (anInfo.getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    }
+        }
+        return false;
+    }
 }

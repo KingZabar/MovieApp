@@ -20,5 +20,6 @@
     <string name="movie_details">Movie details</string>
     <string name="movies">Movies</string>
     <string name="movie_poster">Movie poster</string>
+    <string name="check_internet_message">Please check your internet connection</string>
 
 </resources>

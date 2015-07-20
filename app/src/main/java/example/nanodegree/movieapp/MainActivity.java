@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
         setUpRecyclerView();
 
         if (savedInstanceState == null) {
-            new GetMoviesTask().execute();
+
+            if (Utils.isInternetConnected(this))
+                new GetMoviesTask().execute();
+            else
+                Toast.makeText(getApplicationContext(), R.string.check_internet_message, Toast.LENGTH_LONG).show();
+
         }
 
         Log.d(TAG, "finally onCreate savedInstanceState null --> " + (savedInstanceState == null));
@@ -225,54 +231,41 @@ public class MainActivity extends AppCompatActivity {
             JSONObject jsonObject;
             JSONArray jsonArray;
 
-
             String title, realeaseDate, plotSynopsis, posterPath;
             double userRating, popularity;
             int movieId;
 
-            try {
-                jsonObject = new JSONObject(content);
-                jsonArray = jsonObject.getJSONArray("results");
+            if (content != null)
+                try {
+                    jsonObject = new JSONObject(content);
+                    jsonArray = jsonObject.getJSONArray("results");
 
-                for (int i = 0; i < jsonArray.length(); i++) {
-                    title = jsonArray.getJSONObject(i).getString("title");
-                    realeaseDate = jsonArray.getJSONObject(i).getString("release_date");
-                    plotSynopsis = jsonArray.getJSONObject(i).getString("overview");
-                    posterPath = jsonArray.getJSONObject(i).getString("poster_path");
-                    userRating = jsonArray.getJSONObject(i).getDouble("vote_average");
-                    popularity = jsonArray.getJSONObject(i).getDouble("popularity");
-                    movieId = jsonArray.getJSONObject(i).getInt("id");
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        title = jsonArray.getJSONObject(i).getString("title");
+                        realeaseDate = jsonArray.getJSONObject(i).getString("release_date");
+                        plotSynopsis = jsonArray.getJSONObject(i).getString("overview");
+                        posterPath = jsonArray.getJSONObject(i).getString("poster_path");
+                        userRating = jsonArray.getJSONObject(i).getDouble("vote_average");
+                        popularity = jsonArray.getJSONObject(i).getDouble("popularity");
+                        movieId = jsonArray.getJSONObject(i).getInt("id");
 
-                    Movie movie = new Movie();
-                    movie.setTitle(title);
-                    movie.setReleaseDate(realeaseDate);
-                    movie.setPlotSynopsis(plotSynopsis);
-                    movie.setPosterImageUrl(IMAGE_BASE_PATH + posterPath);
-                    movie.setUserRating(userRating);
-                    movie.setPopularity(popularity);
-                    movie.setMovieId(movieId);
+                        Movie movie = new Movie();
+                        movie.setTitle(title);
+                        movie.setReleaseDate(realeaseDate);
+                        movie.setPlotSynopsis(plotSynopsis);
+                        movie.setPosterImageUrl(IMAGE_BASE_PATH + posterPath);
+                        movie.setUserRating(userRating);
+                        movie.setPopularity(popularity);
+                        movie.setMovieId(movieId);
 
-                    listOfMovies.add(movie);
+                        listOfMovies.add(movie);
+
+                    }
 
 
-//                    if (listOfMovies.get(i).getTitle().contains("Ant-Man")){
-//
-//                        Log.d(TAG, "finally title: " + listOfMovies.get(i).getTitle());
-//                        Log.d(TAG, "finally date: " + listOfMovies.get(i).getReleaseDate());
-//                        Log.d(TAG, "finally synopsis: " + listOfMovies.get(i).getPlotSynopsis());
-//                        Log.d(TAG, "finally imageUrl: " + listOfMovies.get(i).getPosterImageUrl());
-//                        Log.d(TAG, "finally rating: " + listOfMovies.get(i).getUserRating());
-//                        Log.d(TAG, "finally popularity: " + listOfMovies.get(i).getPopularity());
-//                        Log.d(TAG, "finally movieId: " + listOfMovies.get(i).getMovieId());
-//                        Log.d(TAG, "finally .......................................... ");
-//
-//                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
             return null;
         }
 
