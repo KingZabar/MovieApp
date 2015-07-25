@@ -12,7 +12,7 @@ public class Movie implements Parcelable {
     double userRating, popularity;
     int movieId;
 
-    Movie() {
+    public Movie() {
     }
 
     Movie(Parcel in) {

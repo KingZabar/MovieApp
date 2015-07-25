@@ -16,6 +16,7 @@
     <string name="release_date">Release date</string>
     <string name="synopsis">Synopsis</string>
     <string name="rating">Rating</string>
+    <string name="rating_total">10</string>
 
     <string name="movie_details">Movie details</string>
     <string name="movies">Movies</string>

@@ -1,11 +1,13 @@
-package example.nanodegree.movieapp;
+package example.nanodegree.movieapp.fragment;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -14,60 +16,57 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import example.nanodegree.movieapp.fragment.MovieDetailsFragment;
+import example.nanodegree.movieapp.Const;
+import example.nanodegree.movieapp.R;
 
 
-public class MovieDetailsActivity extends AppCompatActivity {
-
+public class MovieDetailsFragment extends Fragment {
+    View rootView;
+    static final String TAG = MovieDetailsFragment.class.getSimpleName();
     String title, realeaseDate, plotSynopsis, imagePosterUrl;
     double userRating;
     TextView tvTitle, tvReleaseDate, tvPlotSynopsis, tvUserRating;
     ImageView imageViewPoster;
-    // RatingBar ratingBar;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.movie_details);
-        initToolBar();
-        getMovieDetails();
-
-
+    public MovieDetailsFragment() {
     }
 
-    private void initToolBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.movie_details);
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.movie_details, container, false);
+        rootView.findViewById(R.id.toolbar).setVisibility(View.GONE);
+        getMovieDetails();
+        initializeViews();
+
+
+        return rootView;
     }
 
     private void getMovieDetails() {
-        Bundle bundle = getIntent().getExtras();
+        Bundle bundle = getArguments();
         if (bundle != null) {
             title = bundle.getString(Const.KEY_TITLE);
             realeaseDate = bundle.getString(Const.KEY_RELEASE_DATE);
             plotSynopsis = bundle.getString(Const.KEY_PLOT_SYNOPSIS);
             imagePosterUrl = bundle.getString(Const.KEY_IMAGE_URL).replace("/w185/", "/w500/");
             userRating = bundle.getDouble(Const.KEY_USER_RATING);
-
-            initializeViews();
         }
     }
 
     private void initializeViews() {
-        tvTitle = (TextView) findViewById(R.id.movie_details_title);
-        tvReleaseDate = (TextView) findViewById(R.id.movie_details_release_date);
-        tvPlotSynopsis = (TextView) findViewById(R.id.movie_details_plot_synopsis);
-        tvUserRating = (TextView) findViewById(R.id.movie_details_rating);
-        imageViewPoster = (ImageView) findViewById(R.id.movie_details_image_poster);
-     //   ratingBar = (RatingBar) findViewById(R.id.movie_details_ratingBar);
-
+        tvTitle = (TextView) rootView.findViewById(R.id.movie_details_title);
+        tvReleaseDate = (TextView) rootView.findViewById(R.id.movie_details_release_date);
+        tvPlotSynopsis = (TextView) rootView.findViewById(R.id.movie_details_plot_synopsis);
+        tvUserRating = (TextView) rootView.findViewById(R.id.movie_details_rating);
+        imageViewPoster = (ImageView) rootView.findViewById(R.id.movie_details_image_poster);
 
         tvTitle.setText(title);
         tvReleaseDate.setText(getFormattedDate());
         tvPlotSynopsis.setText(plotSynopsis);
         tvUserRating.setText(userRating + "/" + getString(R.string.rating_total));
-       // ratingBar.setRating((float) userRating);
-        Picasso.with(this).load(imagePosterUrl).into(imageViewPoster);
+        Picasso.with(getActivity()).load(imagePosterUrl).into(imageViewPoster);
     }
 
     private String getFormattedDate() {
@@ -83,4 +82,5 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         return sdf.format(date);
     }
+
 }
