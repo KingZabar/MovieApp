@@ -205,20 +205,9 @@ public class MoviesFragment extends Fragment {
             holder.imageMoviePoster.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent intent = new Intent(getActivity(), MovieDetailsActivity.class);
-//                    intent.putExtra(Const.KEY_TITLE, listOfMovies.get(position).getTitle());
-//                    intent.putExtra(Const.KEY_IMAGE_URL, listOfMovies.get(position).getPosterImageUrl());
-//                    intent.putExtra(Const.KEY_RELEASE_DATE, listOfMovies.get(position).getReleaseDate());
-//                    intent.putExtra(Const.KEY_PLOT_SYNOPSIS, listOfMovies.get(position).getPlotSynopsis());
-//                    intent.putExtra(Const.KEY_USER_RATING, listOfMovies.get(position).getUserRating());
-//                    startActivity(intent);
 
                     Bundle bundle = new Bundle();
-                    bundle.putString(Const.KEY_TITLE, listOfMovies.get(position).getTitle());
-                    bundle.putString(Const.KEY_IMAGE_URL, listOfMovies.get(position).getPosterImageUrl());
-                    bundle.putString(Const.KEY_RELEASE_DATE, listOfMovies.get(position).getReleaseDate());
-                    bundle.putString(Const.KEY_PLOT_SYNOPSIS, listOfMovies.get(position).getPlotSynopsis());
-                    bundle.putDouble(Const.KEY_USER_RATING, listOfMovies.get(position).getUserRating());
+                    bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
 
                     mCallBack.onMovieSelected(bundle);
                 }

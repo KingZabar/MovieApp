@@ -17,16 +17,18 @@ import java.util.Date;
 import java.util.Locale;
 
 import example.nanodegree.movieapp.Const;
+import example.nanodegree.movieapp.Movie;
 import example.nanodegree.movieapp.R;
 
 
 public class MovieDetailsFragment extends Fragment {
     View rootView;
-    static final String TAG = MovieDetailsFragment.class.getSimpleName();
+ //   static final String TAG = MovieDetailsFragment.class.getSimpleName();
     String title, realeaseDate, plotSynopsis, imagePosterUrl;
     double userRating;
     TextView tvTitle, tvReleaseDate, tvPlotSynopsis, tvUserRating;
     ImageView imageViewPoster;
+    Movie movie;
 
     public MovieDetailsFragment() {
     }
@@ -45,13 +47,13 @@ public class MovieDetailsFragment extends Fragment {
     }
 
     private void getMovieDetails() {
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            title = bundle.getString(Const.KEY_TITLE);
-            realeaseDate = bundle.getString(Const.KEY_RELEASE_DATE);
-            plotSynopsis = bundle.getString(Const.KEY_PLOT_SYNOPSIS);
-            imagePosterUrl = bundle.getString(Const.KEY_IMAGE_URL).replace("/w185/", "/w500/");
-            userRating = bundle.getDouble(Const.KEY_USER_RATING);
+        movie = getArguments().getParcelable(Const.KEY_MOVIE);
+        if (movie != null) {
+            title = movie.getTitle();
+            realeaseDate = movie.getReleaseDate();
+            plotSynopsis = movie.getPlotSynopsis();
+            imagePosterUrl = movie.getPosterImageUrl();
+            userRating = movie.getUserRating();
         }
     }
 

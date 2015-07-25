@@ -3,6 +3,8 @@ package example.nanodegree.movieapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,15 +16,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import example.nanodegree.movieapp.fragment.MovieDetailsFragment;
 
-
-public class MovieDetailsActivity extends AppCompatActivity {
+public class MovieDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
     String title, realeaseDate, plotSynopsis, imagePosterUrl;
     double userRating;
     TextView tvTitle, tvReleaseDate, tvPlotSynopsis, tvUserRating;
     ImageView imageViewPoster;
+    ImageButton fav_button;
+    Movie movie;
     // RatingBar ratingBar;
 
     @Override
@@ -32,7 +34,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
         initToolBar();
         getMovieDetails();
 
-
     }
 
     private void initToolBar() {
@@ -41,13 +42,13 @@ public class MovieDetailsActivity extends AppCompatActivity {
     }
 
     private void getMovieDetails() {
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            title = bundle.getString(Const.KEY_TITLE);
-            realeaseDate = bundle.getString(Const.KEY_RELEASE_DATE);
-            plotSynopsis = bundle.getString(Const.KEY_PLOT_SYNOPSIS);
-            imagePosterUrl = bundle.getString(Const.KEY_IMAGE_URL).replace("/w185/", "/w500/");
-            userRating = bundle.getDouble(Const.KEY_USER_RATING);
+        movie = getIntent().getParcelableExtra(Const.KEY_MOVIE);
+        if (movie != null) {
+            title = movie.getTitle();
+            realeaseDate = movie.getReleaseDate();
+            plotSynopsis = movie.getPlotSynopsis();
+            imagePosterUrl = movie.getPosterImageUrl();
+            userRating = movie.getUserRating();
 
             initializeViews();
         }
@@ -59,14 +60,16 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvPlotSynopsis = (TextView) findViewById(R.id.movie_details_plot_synopsis);
         tvUserRating = (TextView) findViewById(R.id.movie_details_rating);
         imageViewPoster = (ImageView) findViewById(R.id.movie_details_image_poster);
-     //   ratingBar = (RatingBar) findViewById(R.id.movie_details_ratingBar);
+        fav_button = (ImageButton) findViewById(R.id.favorite_button);
+        fav_button.setOnClickListener(this);
+        //   ratingBar = (RatingBar) findViewById(R.id.movie_details_ratingBar);
 
 
         tvTitle.setText(title);
         tvReleaseDate.setText(getFormattedDate());
         tvPlotSynopsis.setText(plotSynopsis);
         tvUserRating.setText(userRating + "/" + getString(R.string.rating_total));
-       // ratingBar.setRating((float) userRating);
+        // ratingBar.setRating((float) userRating);
         Picasso.with(this).load(imagePosterUrl).into(imageViewPoster);
     }
 
@@ -82,5 +85,28 @@ public class MovieDetailsActivity extends AppCompatActivity {
         sdf = new SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH);
 
         return sdf.format(date);
+    }
+
+    boolean theBoolean;
+
+    private void toogleFavButton() {
+        theBoolean ^= true;
+        if (theBoolean)
+            fav_button.setImageResource(android.R.drawable.btn_star_big_on);
+        else fav_button.setImageResource(android.R.drawable.btn_star_big_off);
+
+
+        if (movie != null) {
+            Toast.makeText(this, "" + movie.getTitle(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.favorite_button:
+                toogleFavButton();
+                break;
+        }
     }
 }
