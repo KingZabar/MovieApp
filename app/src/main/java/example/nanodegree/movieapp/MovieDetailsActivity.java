@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -34,6 +35,27 @@ public class MovieDetailsActivity extends AppCompatActivity implements View.OnCl
         initToolBar();
         getMovieDetails();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateFavButton();
+    }
+
+
+    private void updateFavButton() {
+
+        List<Movie> favoriteMovies = Utils.getFavoriteMovies(this);
+        boolean isFound = false;
+
+        for (int i = 0; i < favoriteMovies.size(); i++)
+            if (favoriteMovies.get(i).getMovieId() == movie.getMovieId())
+                isFound = true;
+
+        if (isFound)
+            fav_button.setImageResource(android.R.drawable.btn_star_big_on);
+        else fav_button.setImageResource(android.R.drawable.btn_star_big_off);
     }
 
     private void initToolBar() {
@@ -87,18 +109,10 @@ public class MovieDetailsActivity extends AppCompatActivity implements View.OnCl
         return sdf.format(date);
     }
 
-    boolean theBoolean;
-
     private void toogleFavButton() {
-        theBoolean ^= true;
-        if (theBoolean)
-            fav_button.setImageResource(android.R.drawable.btn_star_big_on);
-        else fav_button.setImageResource(android.R.drawable.btn_star_big_off);
-
-
-        if (movie != null) {
-            Toast.makeText(this, "" + movie.getTitle(), Toast.LENGTH_SHORT).show();
-        }
+        Utils.updateFavoriteMovieList(this, movie);
+        updateFavButton();
+        Toast.makeText(this, "clicked " + Utils.getFavoriteMovies(this).size(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

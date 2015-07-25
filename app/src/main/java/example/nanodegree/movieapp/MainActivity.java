@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Mo
         initToolBar();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.containerList, new MoviesFragment(), "MoviesFragment").addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.containerList, new MoviesFragment(), "MoviesFragment").commit();
 
             if (isDualPane())
                 Toast.makeText(this, "isDualPane", Toast.LENGTH_SHORT).show();

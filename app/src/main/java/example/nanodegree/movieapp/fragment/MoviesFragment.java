@@ -42,6 +42,7 @@ public class MoviesFragment extends Fragment {
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
     ArrayList<Movie> listOfMovies = new ArrayList<>();
+    List<Movie> favoritesList = new ArrayList<>();
     MoviesFragmentListener mCallBack;
 
     public MoviesFragment() {
@@ -130,15 +131,49 @@ public class MoviesFragment extends Fragment {
 
     }
 
+
+    private void setUpRecyclerViewFavorites() {
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(true);
+
+        // mRecyclerView.setBackgroundColor(Color.RED);
+
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+        float density = getResources().getDisplayMetrics().density;
+        float dpWidth = outMetrics.widthPixels / density;
+        int columns = Math.round(dpWidth / 150);
+
+        Log.d(TAG, "columns --> " + columns);
+
+        // use a Grid layout manager
+        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        favoritesList = Utils.getFavoriteMovies(getActivity());
+
+        // specify an adapter
+        mAdapter = new LazyAdapter(Utils.getFavoriteMovies(getActivity()));
+        mRecyclerView.setAdapter(mAdapter);
+
+
+    }
+
     private void sortList() {
         String sortCriteria = PreferenceManager.getDefaultSharedPreferences(getActivity())
-                .getString(getString(R.string.pref_sort_key), getString(R.string.pref_sort_default));
+                .getString(getString(R.string.pref_sort_key), getString(R.string.most_popular));
 
         if (sortCriteria != null)
-            if (sortCriteria.matches(getString(R.string.pref_sort_default))) {
+            if (sortCriteria.matches(getString(R.string.most_popular))) {
                 sortListByPopularity();
-            } else {
+            } else if (sortCriteria.matches(getString(R.string.highest_rated))) {
                 sortListByHighestRated();
+            } else if (sortCriteria.matches(getString(R.string.favorites))) {
+                setUpRecyclerViewFavorites();
             }
     }
 
@@ -152,6 +187,7 @@ public class MoviesFragment extends Fragment {
             }
         });
         mAdapter.notifyDataSetChanged();
+        setUpRecyclerView();
     }
 
     private void sortListByHighestRated() {
@@ -164,6 +200,7 @@ public class MoviesFragment extends Fragment {
             }
         });
         mAdapter.notifyDataSetChanged();
+        setUpRecyclerView();
     }
 
     public class LazyAdapter extends RecyclerView.Adapter<LazyAdapter.ViewHolder> {
@@ -207,7 +244,13 @@ public class MoviesFragment extends Fragment {
                 public void onClick(View v) {
 
                     Bundle bundle = new Bundle();
-                    bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
+                    String sortCriteria = PreferenceManager.getDefaultSharedPreferences(getActivity())
+                            .getString(getString(R.string.pref_sort_key), getString(R.string.most_popular));
+
+                    if (sortCriteria.matches(getString(R.string.favorites)))
+                        bundle.putParcelable(Const.KEY_MOVIE, favoritesList.get(position));
+                    else
+                        bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
 
                     mCallBack.onMovieSelected(bundle);
                 }
@@ -276,8 +319,7 @@ public class MoviesFragment extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            mAdapter.notifyDataSetChanged();
-            //sortList();
+            sortList();
 
         }
     }

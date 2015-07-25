@@ -12,6 +12,11 @@
     <string name="pref_sort_default">Most popular</string>
 
 
+    <string name="most_popular">Most popular</string>
+    <string name="highest_rated">Highest rated</string>
+    <string name="favorites">Favorites</string>
+
+
     <string name="title">Title</string>
     <string name="release_date">Release date</string>
     <string name="synopsis">Synopsis</string>

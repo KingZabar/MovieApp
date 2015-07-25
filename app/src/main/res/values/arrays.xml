@@ -2,8 +2,9 @@
 
 
     <string-array name="sort_Criteria">
-        <item name="most_popular">Most popular</item>
-        <item name="highest_rated">Highest rated</item>
+        <item>@string/most_popular</item>
+        <item>@string/highest_rated</item>
+        <item>@string/favorites</item>
     </string-array>
 
 </resources>
