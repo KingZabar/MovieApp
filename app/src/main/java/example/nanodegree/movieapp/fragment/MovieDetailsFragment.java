@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -46,7 +45,6 @@ public class MovieDetailsFragment extends Fragment implements View.OnClickListen
         rootView.findViewById(R.id.toolbar).setVisibility(View.GONE);
         getMovieDetails();
         initializeViews();
-
 
         return rootView;
     }
@@ -115,7 +113,6 @@ public class MovieDetailsFragment extends Fragment implements View.OnClickListen
     private void toogleFavButton() {
         Utils.updateFavoriteMovieList(getActivity(), movie);
         updateFavButton();
-        Toast.makeText(getActivity(), "clicked " + Utils.getFavoriteMovies(getActivity()).size(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

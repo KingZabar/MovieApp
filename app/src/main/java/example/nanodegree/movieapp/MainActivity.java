@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Mo
 
             MovieDetailsFragment frag = new MovieDetailsFragment();
             frag.setArguments(bundle);
-            getSupportFragmentManager().beginTransaction().replace(R.id.containerDetails, frag, "MovieDetailsFragment").addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.containerDetails, frag, "MovieDetailsFragment").commit();
 
         } else {
             Intent intent = new Intent(getApplicationContext(), MovieDetailsActivity.class);

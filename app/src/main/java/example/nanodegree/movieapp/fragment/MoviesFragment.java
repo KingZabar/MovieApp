@@ -247,10 +247,12 @@ public class MoviesFragment extends Fragment {
                     String sortCriteria = PreferenceManager.getDefaultSharedPreferences(getActivity())
                             .getString(getString(R.string.pref_sort_key), getString(R.string.most_popular));
 
-                    if (sortCriteria.matches(getString(R.string.favorites)))
-                        bundle.putParcelable(Const.KEY_MOVIE, favoritesList.get(position));
-                    else
-                        bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
+                    if (sortCriteria != null) {
+                        if (sortCriteria.matches(getString(R.string.favorites)))
+                            bundle.putParcelable(Const.KEY_MOVIE, favoritesList.get(position));
+                        else
+                            bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
+                    }
 
                     mCallBack.onMovieSelected(bundle);
                 }
@@ -268,7 +270,6 @@ public class MoviesFragment extends Fragment {
     }
 
     private class GetMoviesTask extends AsyncTask<Void, Void, String> {
-
 
         @Override
         protected String doInBackground(Void... params) {
