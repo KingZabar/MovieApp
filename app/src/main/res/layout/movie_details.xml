@@ -69,19 +69,6 @@
                     android:text="120mins" />
 
 
-                <!--<RatingBar-->
-                <!--android:id="@+id/movie_details_ratingBar"-->
-                <!--style="?android:attr/ratingBarStyleSmall"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignLeft="@+id/movie_details_release_date"-->
-                <!--android:layout_alignStart="@+id/movie_details_release_date"-->
-                <!--android:layout_below="@+id/movie_details_release_date"-->
-                <!--android:numStars="10"-->
-                <!--android:stepSize="0.1"-->
-                <!--android:visibility="gone" />-->
-
-
                 <TextView
                     android:id="@+id/movie_details_rating"
                     android:layout_width="wrap_content"
@@ -99,7 +86,8 @@
                     android:layout_alignStart="@+id/movie_details_rating"
                     android:layout_below="@+id/movie_details_rating"
                     android:background="#00ffffff"
-                    android:src="@android:drawable/btn_star" />
+                    android:src="@android:drawable/btn_star"
+                    android:contentDescription="@string/favorites" />
 
                 <TextView
                     android:id="@+id/movie_details_plot_synopsis"

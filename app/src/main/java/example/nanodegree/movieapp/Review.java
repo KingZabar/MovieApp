@@ -8,36 +8,61 @@ import java.io.Serializable;
 public class Review implements Serializable {
 
     public int id;
+    public int page;
+    public int total_pages;
+    public int total_results;
 
-    public TrailerFeed[] results;
+    public ReviewFeed[] results;
 
-    public int getId(){
+    public Review(){}
+
+    public int getId() {
         return id;
     }
 
+    public int getPage() {
+        return page;
+    }
+
+    public int getTotal_pages() {
+        return total_pages;
+    }
+
+    public int getTotal_results() {
+        return total_results;
+    }
+
     public int getSize() {
+        if (results == null)
+            return 0;
+
         return results.length;
     }
 
-    public TrailerFeed[] getResults(){
+    public ReviewFeed[] getResults() {
         return results;
     }
 
-    public static class TrailerFeed {
-        public String key;
-        public String name;
-        public String site;
+    public static class ReviewFeed {
+        public String id;
+        public String author;
+        public String content;
+        public String url;
 
-        public String getKey() {
-            return key;
+        public String getId() {
+            return id;
         }
 
-        public String getName() {
-            return name;
+        public String getAuthor() {
+            return author;
         }
 
-        public String getSite() {
-            return site;
+        public String getContent() {
+            return content;
+        }
+
+        public String getUrl() {
+            return url;
         }
     }
 }

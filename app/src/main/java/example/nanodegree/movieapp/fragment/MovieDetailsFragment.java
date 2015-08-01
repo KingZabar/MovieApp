@@ -24,6 +24,7 @@ import example.nanodegree.movieapp.Const;
 import example.nanodegree.movieapp.Movie;
 import example.nanodegree.movieapp.MovieDetailAdapter;
 import example.nanodegree.movieapp.R;
+import example.nanodegree.movieapp.Review;
 import example.nanodegree.movieapp.Trailer;
 import example.nanodegree.movieapp.Utils;
 
@@ -32,10 +33,10 @@ public class MovieDetailsFragment extends Fragment {
     View rootView;
 
     static final String TAG = MovieDetailsFragment.class.getSimpleName();
-    static final String TRAILER_BASE_URL = "http://api.themoviedb.org/3/movie/MOVIE_ID/videos?&api_key=c0be370cd8ac272132f42a2c34b531d6";
 
     Movie movie;
     Trailer trailer = new Trailer();
+    Review review = new Review();
     List<String> trailerNames = new ArrayList<>();
     ArrayAdapter<String> adapter;
     List dataSet = new ArrayList();
@@ -70,44 +71,42 @@ public class MovieDetailsFragment extends Fragment {
         // use a Grid layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        List<String> reviews = new ArrayList<>();
-        reviews.add("review 1");
-        reviews.add("review 2");
-        reviews.add("review 3");
         // specify an adapter
-        mAdapter = new MovieDetailAdapter(trailer, reviews, getActivity(), movie);
+        mAdapter = new MovieDetailAdapter(trailer, review, getActivity(), movie);
         mRecyclerView.setAdapter(mAdapter);
-
 
     }
 
 
-    private class GetTrailerTask extends AsyncTask<Void, Void, Trailer> {
+    private class GetTrailerTask extends AsyncTask<Void, Void, Void> {
 
         @Override
-        protected Trailer doInBackground(Void... params) {
+        protected Void doInBackground(Void... params) {
 
-            String content = Utils.getStringRequest(TRAILER_BASE_URL.replace("MOVIE_ID", movie.getMovieId() + ""));
+            String contentTrailer = Utils.getStringRequest(Const.TRAILER_BASE_URL.replace("MOVIE_ID", movie.getMovieId() + ""));
+            String contentReview = Utils.getStringRequest(Const.REVIEW_BASE_URL.replace("MOVIE_ID", movie.getMovieId() + ""));
             JSONObject jsonObject;
-            if (content != null) {
-                try {
-                    jsonObject = new JSONObject(content);
-                    Gson gson = new Gson();
+            Gson gson = new Gson();
 
+            try {
+                if (contentTrailer != null) {
+                    jsonObject = new JSONObject(contentTrailer);
                     trailer = gson.fromJson(jsonObject.toString(), Trailer.class);
-
-                    return trailer;
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
 
+                if (contentReview != null) {
+                    jsonObject = new JSONObject(contentReview);
+                    review = gson.fromJson(jsonObject.toString(), Review.class);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
             return null;
         }
 
         @Override
-        protected void onPostExecute(Trailer trailer) {
-            super.onPostExecute(trailer);
+        protected void onPostExecute(Void v) {
+            super.onPostExecute(v);
             setUpRecyclerView();
         }
     }

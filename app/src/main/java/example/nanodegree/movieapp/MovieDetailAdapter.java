@@ -1,6 +1,8 @@
 package example.nanodegree.movieapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +28,7 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
 
     List mDataSet = new ArrayList();
     Trailer trailer = new Trailer();
-    List<String> reviews = new ArrayList();
+    Review review = new Review();
     Movie movie;
     Context context;
     static final int TYPE_MOVIE_DETAILS = R.layout.movie_details;
@@ -35,11 +37,11 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
     static final int TYPE_REVIEW = R.layout.item_review;
 
 
-    public MovieDetailAdapter(Trailer trailer, List<String> reviews, Context context, Movie movie) {
+    public MovieDetailAdapter(Trailer trailer, Review review, Context context, Movie movie) {
         this.movie = movie;
         this.context = context;
         this.trailer = trailer;
-        this.reviews = reviews;
+        this.review = review;
 
         mDataSet.add(context.getString(R.string.trailers));
 
@@ -49,7 +51,11 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             }
 
         mDataSet.add(context.getString(R.string.reviews));
-        mDataSet.addAll(reviews);
+
+        if (review != null)
+            for (int i = 0; i < review.getSize(); i++) {
+                mDataSet.add(review.getResults()[i]);
+            }
     }
 
 
@@ -105,13 +111,13 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             case TYPE_MOVIE_DETAILS:
                 if (holder.fav_button != null)
                     updateFavButton(holder.fav_button);
-                    holder.fav_button.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            toogleFavButton(holder.fav_button);
+                holder.fav_button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        toogleFavButton(holder.fav_button);
 
-                        }
-                    });
+                    }
+                });
 
                 holder.tvTitle.setText(movie.getTitle());
                 holder.tvReleaseDate.setText(getFormattedDate());
@@ -129,17 +135,23 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(context, name, Toast.LENGTH_SHORT).show();
+                        if (key != null) {
+                            Intent intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.setData(Uri.parse(Const.YOUTUBE_TRAILER_BASE_URL + key));
+                            context.startActivity(intent);
+                        }
                     }
                 });
                 break;
 
             case TYPE_REVIEW:
-                final String review = (String) mDataSet.get(pos);
-                holder.mReviewTextView.setText(review);
+                final String content = ((Review.ReviewFeed) mDataSet.get(pos)).getContent();
+                holder.mReviewTextView.setText(content);
                 holder.mReviewTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, review, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, content, Toast.LENGTH_SHORT).show();
                     }
                 });
                 break;
@@ -147,6 +159,16 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             case TYPE_HEADER:
                 final String heading = (String) mDataSet.get(pos);
                 holder.mHeaderTextView.setText(heading);
+
+                if (heading.matches(context.getString(R.string.reviews))) {
+                    if (review.getSize() == 0)
+                        holder.mHeaderTextView.setText("");
+                }
+
+                if (heading.matches(context.getString(R.string.trailers))) {
+                    if (trailer.getSize() == 0)
+                        holder.mHeaderTextView.setText("");
+                }
                 break;
         }
     }
@@ -197,9 +219,12 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             if (favoriteMovies.get(i).getMovieId() == movie.getMovieId())
                 isFound = true;
 
-        if (isFound && imageButton != null)
-            imageButton.setImageResource(android.R.drawable.btn_star_big_on);
-        else imageButton.setImageResource(android.R.drawable.btn_star_big_off);
+        if (imageButton != null) {
+            if (isFound)
+                imageButton.setImageResource(android.R.drawable.btn_star_big_on);
+            else imageButton.setImageResource(android.R.drawable.btn_star_big_off);
+
+        }
     }
 
     private void toogleFavButton(ImageButton imageButton) {

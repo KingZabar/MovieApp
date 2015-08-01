@@ -7,6 +7,9 @@ import java.io.Serializable;
  */
 public class Trailer implements Serializable {
 
+    public Trailer() {
+    }
+
     public int id;
 
     public TrailerFeed[] results;
