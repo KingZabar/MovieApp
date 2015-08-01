@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import example.nanodegree.movieapp.fragment.MovieDetailsFragment;
-import example.nanodegree.movieapp.fragment.MoviesFragment;
+import example.nanodegree.movieapp.fragment.MoviesGridFragment;
 
 
-public class MainActivity extends AppCompatActivity implements MoviesFragment.MoviesFragmentListener {
+public class MainActivity extends AppCompatActivity implements MoviesGridFragment.MoviesFragmentListener {
 
     static final String TAG = MainActivity.class.getSimpleName();
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Mo
         initToolBar();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.containerList, new MoviesFragment(), "MoviesFragment").commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.containerList, new MoviesGridFragment(), "MoviesGridFragment").commit();
 
             if (isDualPane())
                 Toast.makeText(this, "isDualPane", Toast.LENGTH_SHORT).show();

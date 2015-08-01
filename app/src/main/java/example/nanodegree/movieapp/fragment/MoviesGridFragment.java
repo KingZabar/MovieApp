@@ -34,9 +34,9 @@ import example.nanodegree.movieapp.R;
 import example.nanodegree.movieapp.Utils;
 
 
-public class MoviesFragment extends Fragment {
+public class MoviesGridFragment extends Fragment {
     View rootView;
-    static final String TAG = MoviesFragment.class.getSimpleName();
+    static final String TAG = MoviesGridFragment.class.getSimpleName();
     static final String IMAGE_BASE_PATH = "http://image.tmdb.org/t/p/w500/";
     RecyclerView mRecyclerView;
     RecyclerView.Adapter mAdapter;
@@ -45,7 +45,7 @@ public class MoviesFragment extends Fragment {
     List<Movie> favoritesList = new ArrayList<>();
     MoviesFragmentListener mCallBack;
 
-    public MoviesFragment() {
+    public MoviesGridFragment() {
     }
 
     public interface MoviesFragmentListener {

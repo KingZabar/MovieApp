@@ -1,38 +1,47 @@
 package example.nanodegree.movieapp.fragment;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
 
-import com.squareup.picasso.Picasso;
+import com.google.gson.Gson;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import example.nanodegree.movieapp.Const;
 import example.nanodegree.movieapp.Movie;
+import example.nanodegree.movieapp.MovieDetailAdapter;
 import example.nanodegree.movieapp.R;
+import example.nanodegree.movieapp.Trailer;
 import example.nanodegree.movieapp.Utils;
 
 
-public class MovieDetailsFragment extends Fragment implements View.OnClickListener {
+public class MovieDetailsFragment extends Fragment {
     View rootView;
- //   static final String TAG = MovieDetailsFragment.class.getSimpleName();
-    String title, realeaseDate, plotSynopsis, imagePosterUrl;
-    double userRating;
-    TextView tvTitle, tvReleaseDate, tvPlotSynopsis, tvUserRating;
-    ImageView imageViewPoster;
+
+    static final String TAG = MovieDetailsFragment.class.getSimpleName();
+    static final String TRAILER_BASE_URL = "http://api.themoviedb.org/3/movie/MOVIE_ID/videos?&api_key=c0be370cd8ac272132f42a2c34b531d6";
+
     Movie movie;
-    ImageButton fav_button;
+    Trailer trailer = new Trailer();
+    List<String> trailerNames = new ArrayList<>();
+    ArrayAdapter<String> adapter;
+    List dataSet = new ArrayList();
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
 
     public MovieDetailsFragment() {
     }
@@ -41,86 +50,65 @@ public class MovieDetailsFragment extends Fragment implements View.OnClickListen
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.movie_details, container, false);
-        rootView.findViewById(R.id.toolbar).setVisibility(View.GONE);
-        getMovieDetails();
-        initializeViews();
-
+        rootView = inflater.inflate(R.layout.movie_details_trailer, container, false);
+        movie = getArguments().getParcelable(Const.KEY_MOVIE);
+        setUpRecyclerView();
+        new GetTrailerTask().execute();
         return rootView;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        updateFavButton();
+    private void setUpRecyclerView() {
+
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(true);
+
+        Log.d(TAG, "trailer --> " + trailer.getSize());
+
+        // use a Grid layout manager
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        List<String> reviews = new ArrayList<>();
+        reviews.add("review 1");
+        reviews.add("review 2");
+        reviews.add("review 3");
+        // specify an adapter
+        mAdapter = new MovieDetailAdapter(trailer, reviews, getActivity(), movie);
+        mRecyclerView.setAdapter(mAdapter);
+
+
     }
 
-    private void getMovieDetails() {
-        movie = getArguments().getParcelable(Const.KEY_MOVIE);
-        if (movie != null) {
-            title = movie.getTitle();
-            realeaseDate = movie.getReleaseDate();
-            plotSynopsis = movie.getPlotSynopsis();
-            imagePosterUrl = movie.getPosterImageUrl();
-            userRating = movie.getUserRating();
+
+    private class GetTrailerTask extends AsyncTask<Void, Void, Trailer> {
+
+        @Override
+        protected Trailer doInBackground(Void... params) {
+
+            String content = Utils.getStringRequest(TRAILER_BASE_URL.replace("MOVIE_ID", movie.getMovieId() + ""));
+            JSONObject jsonObject;
+            if (content != null) {
+                try {
+                    jsonObject = new JSONObject(content);
+                    Gson gson = new Gson();
+
+                    trailer = gson.fromJson(jsonObject.toString(), Trailer.class);
+
+                    return trailer;
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+            return null;
         }
-    }
 
-    private void initializeViews() {
-        tvTitle = (TextView) rootView.findViewById(R.id.movie_details_title);
-        tvReleaseDate = (TextView) rootView.findViewById(R.id.movie_details_release_date);
-        tvPlotSynopsis = (TextView) rootView.findViewById(R.id.movie_details_plot_synopsis);
-        tvUserRating = (TextView) rootView.findViewById(R.id.movie_details_rating);
-        imageViewPoster = (ImageView) rootView.findViewById(R.id.movie_details_image_poster);
-        fav_button = (ImageButton) rootView.findViewById(R.id.favorite_button);
-        fav_button.setOnClickListener(this);
-
-        tvTitle.setText(title);
-        tvReleaseDate.setText(getFormattedDate());
-        tvPlotSynopsis.setText(plotSynopsis);
-        tvUserRating.setText(userRating + "/" + getString(R.string.rating_total));
-        Picasso.with(getActivity()).load(imagePosterUrl).into(imageViewPoster);
-    }
-
-    private String getFormattedDate() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
-        Date date = new Date();
-        try {
-            date = sdf.parse(realeaseDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        sdf = new SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH);
-
-        return sdf.format(date);
-    }
-
-    private void updateFavButton() {
-
-        List<Movie> favoriteMovies = Utils.getFavoriteMovies(getActivity());
-        boolean isFound = false;
-
-        for (int i = 0; i < favoriteMovies.size(); i++)
-            if (favoriteMovies.get(i).getMovieId() == movie.getMovieId())
-                isFound = true;
-
-        if (isFound)
-            fav_button.setImageResource(android.R.drawable.btn_star_big_on);
-        else fav_button.setImageResource(android.R.drawable.btn_star_big_off);
-    }
-
-    private void toogleFavButton() {
-        Utils.updateFavoriteMovieList(getActivity(), movie);
-        updateFavButton();
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.favorite_button:
-                toogleFavButton();
-                break;
+        @Override
+        protected void onPostExecute(Trailer trailer) {
+            super.onPostExecute(trailer);
+            setUpRecyclerView();
         }
     }
 }

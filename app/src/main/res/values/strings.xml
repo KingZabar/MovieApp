@@ -27,5 +27,7 @@
     <string name="movies">Movies</string>
     <string name="movie_poster">Movie poster</string>
     <string name="check_internet_message">Please check your internet connection</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
 
 </resources>
