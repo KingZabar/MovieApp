@@ -62,11 +62,11 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView mTrailerTextView;
-        public TextView mReviewTextView;
+        public TextView mReviewAuthorTextView;
+        public TextView mReviewContentTextView;
         public TextView mHeaderTextView;
 
-        //Movie Details View
-
+        // TYPE_MOVIE_DETAILS
         public TextView tvTitle, tvReleaseDate, tvPlotSynopsis, tvUserRating;
         public ImageView imageViewPoster;
         public ImageButton fav_button;
@@ -74,8 +74,8 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
         public ViewHolder(View rootItemView) {
             super(rootItemView);
             // set view by Ids here
-            //Movie details
 
+            //Movie details
             tvTitle = (TextView) rootItemView.findViewById(R.id.movie_details_title);
             tvReleaseDate = (TextView) rootItemView.findViewById(R.id.movie_details_release_date);
             tvPlotSynopsis = (TextView) rootItemView.findViewById(R.id.movie_details_plot_synopsis);
@@ -83,10 +83,14 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             imageViewPoster = (ImageView) rootItemView.findViewById(R.id.movie_details_image_poster);
             fav_button = (ImageButton) rootItemView.findViewById(R.id.favorite_button);
 
+            // Reviews
+            mReviewAuthorTextView = (TextView) rootItemView.findViewById(R.id.textView_review_author);
+            mReviewContentTextView = (TextView) rootItemView.findViewById(R.id.textView_review_content);
+
             // Others
             mTrailerTextView = (TextView) rootItemView.findViewById(R.id.textView_trailer);
-            mReviewTextView = (TextView) rootItemView.findViewById(R.id.textView_review);
             mHeaderTextView = (TextView) rootItemView.findViewById(R.id.textView_item);
+
 
             //
         }
@@ -146,14 +150,11 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
                 break;
 
             case TYPE_REVIEW:
+
+                final String author = ((Review.ReviewFeed) mDataSet.get(pos)).getAuthor();
                 final String content = ((Review.ReviewFeed) mDataSet.get(pos)).getContent();
-                holder.mReviewTextView.setText(content);
-                holder.mReviewTextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(context, content, Toast.LENGTH_SHORT).show();
-                    }
-                });
+                holder.mReviewAuthorTextView.setText(author);
+                holder.mReviewContentTextView.setText(content);
                 break;
 
             case TYPE_HEADER:

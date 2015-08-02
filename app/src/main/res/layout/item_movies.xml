@@ -1,13 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/imageView_movie_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/movie_poster"
-        android:src="@mipmap/ic_launcher" />
-
-</LinearLayout>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageView_movie_item"
+    android:layout_width="@dimen/poster_width"
+    android:layout_height="@dimen/poster_height"
+    android:clipToPadding="false"
+    android:scaleType="fitXY"
+    android:contentDescription="@string/movie_poster"
+    android:src="@mipmap/ic_launcher" />

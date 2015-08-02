@@ -28,7 +28,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import example.nanodegree.movieapp.AutofitRecyclerView;
 import example.nanodegree.movieapp.Const;
+import example.nanodegree.movieapp.MainActivity;
 import example.nanodegree.movieapp.Movie;
 import example.nanodegree.movieapp.R;
 import example.nanodegree.movieapp.Utils;
@@ -120,8 +122,12 @@ public class MoviesGridFragment extends Fragment {
 
         Log.d(TAG, "columns --> " + columns);
 
+        if (((MainActivity) getActivity()).isDualPane()) {
+            columns = columns / 2;
+        }
+
         // use a Grid layout manager
-        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mLayoutManager = new GridLayoutManager(getActivity(), columns);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter
@@ -133,7 +139,7 @@ public class MoviesGridFragment extends Fragment {
 
 
     private void setUpRecyclerViewFavorites() {
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
+        mRecyclerView = (AutofitRecyclerView) rootView.findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -324,5 +330,61 @@ public class MoviesGridFragment extends Fragment {
 
         }
     }
+
+//    public class GridAdapter extends ArrayAdapter {
+//
+//        private List<Movie> mDataset;
+//        private Context context;
+//
+//        public GridAdapter(Context context, int resource, List<Movie> objects) {
+//            super(context, resource, objects);
+//            this.context = context;
+//            this.mDataset = objects;
+//
+//        }
+//
+//        public class ViewHolder {
+//            public ImageView imageMoviePoster;
+//        }
+//
+//        @Override
+//        public View getView(final int position, View convertView, ViewGroup parent) {
+//
+//            ViewHolder holder;
+//            if (convertView == null) {
+//                holder = new ViewHolder();
+//                convertView = LayoutInflater.from(context).inflate(R.layout.item_movies, parent, false);
+//                holder.imageMoviePoster = (ImageView) convertView.findViewById(R.id.imageView_movie_item);
+//                convertView.setTag(holder);
+//            } else {
+//                holder = (ViewHolder) convertView.getTag();
+//            }
+//
+//            holder.imageMoviePoster.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    Bundle bundle = new Bundle();
+//                    String sortCriteria = PreferenceManager.getDefaultSharedPreferences(getActivity())
+//                            .getString(getString(R.string.pref_sort_key), getString(R.string.most_popular));
+//
+//                    if (sortCriteria != null) {
+//                        if (sortCriteria.matches(getString(R.string.favorites)))
+//                            bundle.putParcelable(Const.KEY_MOVIE, favoritesList.get(position));
+//                        else
+//                            bundle.putParcelable(Const.KEY_MOVIE, listOfMovies.get(position));
+//                    }
+//
+//                    mCallBack.onMovieSelected(bundle);
+//                }
+//            });
+//
+//            String imgUrl = mDataset.get(position).getPosterImageUrl();
+//            Picasso.with(getActivity()).load(imgUrl).into(holder.imageMoviePoster);
+//
+//
+//            return convertView;
+//        }
+//    }
 
 }

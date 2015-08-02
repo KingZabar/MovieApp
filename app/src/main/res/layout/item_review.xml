@@ -1,7 +1,33 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/textView_review"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:gravity="center_vertical"
     android:layout_height="wrap_content"
-    android:text="@string/reviews"/>
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/list_item_vertical_spacing"
+    android:paddingTop="@dimen/list_item_vertical_spacing"
+    android:text="@string/reviews">
+
+
+    <TextView
+        android:id="@+id/textView_review_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_social_person"
+        android:drawableStart="@drawable/ic_social_person"
+        android:gravity="center_vertical"
+        android:text="@string/reviews" />
+
+    <TextView
+        android:id="@+id/textView_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_review_author"
+        android:layout_alignStart="@+id/textView_review_author"
+        android:layout_below="@+id/textView_review_author"
+        android:layout_marginLeft="@dimen/view_left_margin"
+        android:layout_marginStart="@dimen/view_left_margin"
+        android:gravity="center_vertical"
+        android:text="@string/reviews" />
+
+</RelativeLayout>
 

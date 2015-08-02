@@ -1,5 +1,6 @@
 package example.nanodegree.movieapp.fragment;
 
+import android.graphics.Canvas;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import example.nanodegree.movieapp.Const;
+import example.nanodegree.movieapp.CutomItemDecoration;
 import example.nanodegree.movieapp.Movie;
 import example.nanodegree.movieapp.MovieDetailAdapter;
 import example.nanodegree.movieapp.R;
@@ -65,8 +67,8 @@ public class MovieDetailsFragment extends Fragment {
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.addItemDecoration(new CutomItemDecoration.DividerItemDecoration(getActivity(), R.drawable.divider_padded));
 
-        Log.d(TAG, "trailer --> " + trailer.getSize());
 
         // use a Grid layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());

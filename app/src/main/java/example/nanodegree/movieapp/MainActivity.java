@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements MoviesGridFragmen
         });
     }
 
-    private boolean isDualPane() {
+    public boolean isDualPane() {
         if (findViewById(R.id.containerDetails) != null)
             return true;
         else return false;
