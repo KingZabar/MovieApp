@@ -10,21 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac49239b-5bbd-4d42-95ac-421493885281" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/AutofitRecyclerView.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MainActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Movie.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Movie.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MovieDetailsActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Review.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Review.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/SettingsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/SettingsActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Trailer.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Trailer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/container_layout_movie.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a9a2056b-829e-4697-8ba1-b0d0cf9679dc" name="Z ignore changelist" comment="" />
@@ -1601,6 +1587,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1738,7 +1750,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/android-recyclerview-master" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="addd9aa7" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="10_1_WXGA_Tablet_API_22" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2048,7 +2060,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438452456471</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="some  code clean ups">
+      <created>1438568491487</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1438568491487</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2113,7 +2131,8 @@
     <MESSAGE value="RecyclerView getItemViewType used for Movie Details View" />
     <MESSAGE value="Added Reviews to Details View" />
     <MESSAGE value="Using fixed layout dimens for poster Image View&#10;Using scaleType fitxy&#10;some code clean ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Using fixed layout dimens for poster Image View&#10;Using scaleType fitxy&#10;some code clean ups" />
+    <MESSAGE value="some  code clean ups" />
+    <option name="LAST_COMMIT_MESSAGE" value="some  code clean ups" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2193,13 +2212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/container_layout_movie.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.896552">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -2318,6 +2330,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.049295776">
           <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="e#417#418#0" expanded="false" />
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#559#560#0" expanded="false" />
+            <element signature="method#getSize#0;class#Review#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
