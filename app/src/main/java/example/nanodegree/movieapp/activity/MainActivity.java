@@ -1,19 +1,21 @@
-package example.nanodegree.movieapp;
+package example.nanodegree.movieapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import example.nanodegree.movieapp.R;
 import example.nanodegree.movieapp.fragment.MovieDetailsFragment;
 import example.nanodegree.movieapp.fragment.MoviesGridFragment;
 
 
 public class MainActivity extends AppCompatActivity implements MoviesGridFragment.MoviesFragmentListener {
 
-    static final String TAG = MainActivity.class.getSimpleName();
+   // static final String TAG = MainActivity.class.getSimpleName();
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +26,26 @@ public class MainActivity extends AppCompatActivity implements MoviesGridFragmen
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.containerList, new MoviesGridFragment(), "MoviesGridFragment").commit();
 
-            if (isDualPane())
-                Toast.makeText(this, "isDualPane", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateToolbarTitle();
+    }
+
+    private void updateToolbarTitle() {
+        if (toolbar != null) {
+            String sortCriteria = PreferenceManager.getDefaultSharedPreferences(this)
+                    .getString(getString(R.string.pref_sort_key), getString(R.string.most_popular));
+            toolbar.setTitle(getString(R.string.movies) + " - " + sortCriteria.toLowerCase());
         }
     }
 
     private void initToolBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         toolbar.setTitle(R.string.movies);
 
         toolbar.inflateMenu(R.menu.menu_main);
@@ -51,9 +66,7 @@ public class MainActivity extends AppCompatActivity implements MoviesGridFragmen
     }
 
     public boolean isDualPane() {
-        if (findViewById(R.id.containerDetails) != null)
-            return true;
-        else return false;
+        return findViewById(R.id.containerDetails) != null;
     }
 
     @Override

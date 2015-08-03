@@ -1,4 +1,4 @@
-package example.nanodegree.movieapp;
+package example.nanodegree.movieapp.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

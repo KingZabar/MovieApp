@@ -1,2 +1,2 @@
 # MovieApp
-Incluce your MovieDb API KEY in Const.java class.
+Please incluce your MovieDb API KEY in Const.java class. Thanks.

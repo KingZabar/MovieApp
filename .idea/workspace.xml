@@ -10,35 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac49239b-5bbd-4d42-95ac-421493885281" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_av_play_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_av_play_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_av_play_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_av_play_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_av_play_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_social_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_social_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_social_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_social_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_social_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/AutofitRecyclerView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/container_layout_movie.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw720dp/container_layout_movie.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/divider.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/divider_padded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/selector_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/selector_row.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_textView.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_textview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/AutofitRecyclerView.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MainActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Movie.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Movie.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MovieDetailsActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Review.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Review.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/SettingsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/SettingsActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Trailer.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Trailer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_review.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_review.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_trailer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_trailer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a9a2056b-829e-4697-8ba1-b0d0cf9679dc" name="Z ignore changelist" comment="" />
@@ -61,14 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_recycler.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="Const.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26086956">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.15337424">
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -77,101 +60,28 @@
       <file leaf-file-name="MoviesGridFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.37037">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-              <folding>
-                <element signature="method#onCreateView#0;class#MoviesGridFragment#0" expanded="false" />
-                <element signature="e#2583#2614#0" expanded="true" />
-                <element signature="method#setUpRecyclerViewFavorites#0;class#MoviesGridFragment#0" expanded="false" />
-                <element signature="e#5796#5829#0" expanded="true" />
-                <element signature="e#5831#5863#0" expanded="true" />
-                <element signature="e#5938#5970#0" expanded="true" />
-                <element signature="e#6059#6092#0" expanded="true" />
-                <element signature="e#6183#6212#0" expanded="true" />
-                <element signature="e#7413#7414#0" expanded="true" />
-                <element signature="e#7455#7456#0" expanded="true" />
-                <element signature="e#8678#9501#0" expanded="true" />
-                <element signature="e#8972#9005#0" expanded="true" />
-                <element signature="e#9007#9039#0" expanded="true" />
-                <element signature="e#9140#9169#0" expanded="true" />
-                <element signature="e#9500#9501#0" expanded="true" />
-                <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
-                <element signature="e#12073#12126#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutomItemDecoration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
               <folding>
-                <element signature="class#VerticalSpaceItemDecoration#0;class#CutomItemDecoration#0" expanded="false" />
+                <element signature="method#sortList#0;class#MoviesGridFragment#0" expanded="false" />
+                <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
+                <element signature="e#12025#12078#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+              <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#1436#1462#0" expanded="true" />
                 <element signature="method#initToolBar#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#isDualPane#0;class#MainActivity#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_movies.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.137931">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#138#159#0" expanded="true" />
-                <element signature="e#186#208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movie_details.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.310345">
-              <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-              <folding>
-                <element signature="e#453#468#0" expanded="true" />
-                <element signature="e#543#571#0" expanded="true" />
-                <element signature="e#762#797#0" expanded="true" />
-                <element signature="e#833#868#0" expanded="true" />
-                <element signature="e#938#971#0" expanded="true" />
-                <element signature="e#999#1032#0" expanded="true" />
-                <element signature="e#1145#1166#0" expanded="true" />
-                <element signature="e#1201#1223#0" expanded="true" />
-                <element signature="e#2841#2860#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1231,7 +1141,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4312295563000" />
+        <entry key="$PROJECT_DIR$" value="4313026095000" />
         <entry key="$USER_HOME$/StashProjects/android_lockscreen" value="8621826930000" />
       </map>
     </option>
@@ -1534,7 +1444,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieGridActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieGridActivity2.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/pref_channels_layout.xml" />
@@ -1546,7 +1455,6 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/container_layout_movie.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/container_layout_movie.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Movie.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
@@ -1562,7 +1470,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Trailer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Review.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/divider_padded.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/movie_details_trailer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_textview.xml" />
@@ -1570,17 +1477,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/divider.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/selector_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_review.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/selector_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_trailer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/AutofitRecyclerView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
       </list>
     </option>
   </component>
@@ -1603,7 +1513,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1615,7 +1525,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1692,92 +1601,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout-sw720dp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1816,7 +1639,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
+              <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1840,6 +1663,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1857,28 +1681,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1910,43 +1712,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="movieapp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movieapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1961,6 +1730,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1969,7 +1739,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/android-recyclerview-master" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_7_2012_Cloned_API_22" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="10_1_WXGA_Tablet_API_22" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="android.project.structure.last.selected" value="app" />
@@ -1982,11 +1752,11 @@
       <recent name="example.nanodegree.movieapp.fragment" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp" />
       <recent name="$PROJECT_DIR$/app/src/main/res" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout-land" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res" />
@@ -2289,7 +2059,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26241136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2310,6 +2079,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2352,12 +2122,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
           <folding>
             <element signature="method#initToolBar#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#isDualPane#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2376,7 +2147,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MovieDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
@@ -2404,13 +2175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5070422">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/pref_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43421054">
@@ -2425,17 +2189,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/SettingsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23595506">
-          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -2446,23 +2203,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035714287">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/drawable-mdpi/abc_btn_rating_star_on_mtrl_alpha.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64044946">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
@@ -2480,7 +2223,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Movie.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0131578">
           <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
@@ -2516,7 +2259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2732" column="9" selection-start-line="2732" selection-start-column="9" selection-end-line="2732" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2524,24 +2266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7630923">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Trailer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35211268">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="method#getSize#0;class#Trailer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="93" selection-start-line="15" selection-start-column="93" selection-end-line="15" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -2590,35 +2314,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Review.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Review.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.049295776">
           <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#390#391#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#486#487#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="method#getSize#0;class#Review#0" expanded="false" />
-            <element signature="e#931#932#0" expanded="false" />
-            <element signature="e#964#965#0" expanded="false" />
-            <element signature="e#1001#1002#0" expanded="false" />
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="false" />
-            <element signature="e#1114#1115#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2626,7 +2325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2634,7 +2332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2642,7 +2339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2654,9 +2350,9 @@
         <state vertical-scroll-proportion="0.22670025">
           <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
           <folding>
-            <element signature="e#388#423#0" expanded="true" />
-            <element signature="e#455#490#0" expanded="true" />
-            <element signature="e#600#618#0" expanded="true" />
+            <element signature="e#388#423#0" expanded="false" />
+            <element signature="e#455#490#0" expanded="false" />
+            <element signature="e#600#618#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2669,7 +2365,7 @@
         <state vertical-scroll-proportion="0.24324325">
           <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
           <folding>
-            <element signature="e#253#288#0" expanded="true" />
+            <element signature="e#253#288#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2678,31 +2374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14084508">
           <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48370928">
-          <caret line="156" column="63" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MovieDetailAdapter#0;class#MovieDetailAdapter#0" expanded="false" />
-            <element signature="method#getFormattedDate#0;class#MovieDetailAdapter#0" expanded="false" />
-            <element signature="method#toogleFavButton#0;class#MovieDetailAdapter#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/container_layout_movie.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64231735">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2717,17 +2388,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MovieDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
@@ -2738,20 +2399,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/AutofitRecyclerView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7253521">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.26086956">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32608697">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/container_layout_movie.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28211588">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MovieDetailsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7183099">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -2761,90 +2463,106 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.310345">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.68010074">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding>
-            <element signature="e#453#468#0" expanded="true" />
-            <element signature="e#543#571#0" expanded="true" />
-            <element signature="e#762#797#0" expanded="true" />
-            <element signature="e#833#868#0" expanded="true" />
-            <element signature="e#938#971#0" expanded="true" />
-            <element signature="e#999#1032#0" expanded="true" />
-            <element signature="e#1145#1166#0" expanded="true" />
-            <element signature="e#1201#1223#0" expanded="true" />
-            <element signature="e#2841#2860#0" expanded="true" />
+            <element signature="e#1201#1223#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_movies.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.137931">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2112676">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037406486">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.555555">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
           <folding>
-            <element signature="e#138#159#0" expanded="true" />
-            <element signature="e#186#208#0" expanded="true" />
+            <element signature="method#getFormattedDate#0;class#MovieDetailAdapter#0" expanded="false" />
+            <element signature="method#toogleFavButton#0;class#MovieDetailAdapter#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/model/Trailer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.4225352">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="method#initToolBar#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#isDualPane#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getSize#0;class#Trailer#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.119718">
+          <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.44366196">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
             <element signature="class#VerticalSpaceItemDecoration#0;class#CutomItemDecoration#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.37037">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.049295776">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
           <folding>
-            <element signature="method#onCreateView#0;class#MoviesGridFragment#0" expanded="false" />
-            <element signature="e#2583#2614#0" expanded="true" />
-            <element signature="method#setUpRecyclerViewFavorites#0;class#MoviesGridFragment#0" expanded="false" />
-            <element signature="e#5796#5829#0" expanded="true" />
-            <element signature="e#5831#5863#0" expanded="true" />
-            <element signature="e#5938#5970#0" expanded="true" />
-            <element signature="e#6059#6092#0" expanded="true" />
-            <element signature="e#6183#6212#0" expanded="true" />
-            <element signature="e#7413#7414#0" expanded="true" />
-            <element signature="e#7455#7456#0" expanded="true" />
-            <element signature="e#8678#9501#0" expanded="true" />
-            <element signature="e#8972#9005#0" expanded="true" />
-            <element signature="e#9007#9039#0" expanded="true" />
-            <element signature="e#9140#9169#0" expanded="true" />
-            <element signature="e#9500#9501#0" expanded="true" />
-            <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
-            <element signature="e#12073#12126#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#1436#1462#0" expanded="true" />
+            <element signature="method#initToolBar#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recycler.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26086956">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <element signature="method#sortList#0;class#MoviesGridFragment#0" expanded="false" />
+            <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
+            <element signature="e#12025#12078#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15337424">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
           <folding />
         </state>
       </provider>

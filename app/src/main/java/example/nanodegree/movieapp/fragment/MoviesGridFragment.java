@@ -28,10 +28,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import example.nanodegree.movieapp.AutofitRecyclerView;
 import example.nanodegree.movieapp.Const;
-import example.nanodegree.movieapp.MainActivity;
-import example.nanodegree.movieapp.Movie;
+import example.nanodegree.movieapp.activity.MainActivity;
+import example.nanodegree.movieapp.model.Movie;
 import example.nanodegree.movieapp.R;
 import example.nanodegree.movieapp.Utils;
 
@@ -139,7 +138,7 @@ public class MoviesGridFragment extends Fragment {
 
 
     private void setUpRecyclerViewFavorites() {
-        mRecyclerView = (AutofitRecyclerView) rootView.findViewById(R.id.my_recycler_view);
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView

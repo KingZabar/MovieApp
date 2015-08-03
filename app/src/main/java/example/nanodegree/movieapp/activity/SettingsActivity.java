@@ -1,4 +1,4 @@
-package example.nanodegree.movieapp;
+package example.nanodegree.movieapp.activity;
 
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import example.nanodegree.movieapp.R;
 
 
 public class SettingsActivity extends AppCompatActivity {

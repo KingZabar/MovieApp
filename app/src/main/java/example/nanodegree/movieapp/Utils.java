@@ -15,9 +15,9 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
+import example.nanodegree.movieapp.model.Movie;
 
 
 public class Utils {

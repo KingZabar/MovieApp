@@ -4,13 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -21,12 +21,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by oofong25 on 7/31/15.
- */
+import example.nanodegree.movieapp.model.Movie;
+import example.nanodegree.movieapp.model.Review;
+import example.nanodegree.movieapp.model.Trailer;
+
 public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.ViewHolder> {
 
-    List mDataSet = new ArrayList();
+    List<Object> mDataSet = new ArrayList<>();
     Trailer trailer = new Trailer();
     Review review = new Review();
     Movie movie;
@@ -138,7 +139,6 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
                 holder.mTrailerTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(context, name, Toast.LENGTH_SHORT).show();
                         if (key != null) {
                             Intent intent = new Intent(Intent.ACTION_VIEW);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -154,7 +154,7 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
                 final String author = ((Review.ReviewFeed) mDataSet.get(pos)).getAuthor();
                 final String content = ((Review.ReviewFeed) mDataSet.get(pos)).getContent();
                 holder.mReviewAuthorTextView.setText(author);
-                holder.mReviewContentTextView.setText(content);
+                holder.mReviewContentTextView.setText(Html.fromHtml(content)); //Remove html tags from content
                 break;
 
             case TYPE_HEADER:

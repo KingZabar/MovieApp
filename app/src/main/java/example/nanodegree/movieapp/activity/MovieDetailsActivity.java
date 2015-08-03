@@ -1,10 +1,11 @@
-package example.nanodegree.movieapp;
+package example.nanodegree.movieapp.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import example.nanodegree.movieapp.R;
 import example.nanodegree.movieapp.fragment.MovieDetailsFragment;
 
 

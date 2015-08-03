@@ -1,13 +1,11 @@
 package example.nanodegree.movieapp.fragment;
 
-import android.graphics.Canvas;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +21,11 @@ import java.util.List;
 
 import example.nanodegree.movieapp.Const;
 import example.nanodegree.movieapp.CutomItemDecoration;
-import example.nanodegree.movieapp.Movie;
+import example.nanodegree.movieapp.model.Movie;
 import example.nanodegree.movieapp.MovieDetailAdapter;
 import example.nanodegree.movieapp.R;
-import example.nanodegree.movieapp.Review;
-import example.nanodegree.movieapp.Trailer;
+import example.nanodegree.movieapp.model.Review;
+import example.nanodegree.movieapp.model.Trailer;
 import example.nanodegree.movieapp.Utils;
 
 

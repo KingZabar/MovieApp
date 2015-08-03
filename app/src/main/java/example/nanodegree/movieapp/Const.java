@@ -3,7 +3,7 @@ package example.nanodegree.movieapp;
 
 public class Const {
 
-    public static final String MOVIE_DB_API_KEY = "c0be370cd8ac272132f42a2c34b531d6";
+    public static final String MOVIE_DB_API_KEY = "YOUR_MOVIE_DB_API_KEY_HERE";
 
 
     public final static String KEY_MOVIE_LIST = "key_movie_list";
