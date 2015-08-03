@@ -7,10 +7,12 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac49239b-5bbd-4d42-95ac-421493885281" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/container_layout_movie.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a9a2056b-829e-4697-8ba1-b0d0cf9679dc" name="Z ignore changelist" comment="" />
@@ -33,25 +35,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Const.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Const.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15337424">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoviesGridFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MoviesGridFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.63852817">
+              <caret line="162" column="71" selection-start-line="162" selection-start-column="71" selection-end-line="162" selection-end-column="71" />
               <folding>
                 <element signature="method#sortList#0;class#MoviesGridFragment#0" expanded="false" />
                 <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
-                <element signature="e#12025#12078#0" expanded="false" />
+                <element signature="e#12136#12189#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1472,11 +1474,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/movie_details.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/MovieDetailAdapter.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/CutomItemDecoration.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java" />
       </list>
     </option>
   </component>
@@ -1651,7 +1653,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="fragment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2066,7 +2068,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438568491487</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Removed Master-Detail layout from phone UI">
+      <created>1438574449973</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1438574449973</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2132,7 +2140,8 @@
     <MESSAGE value="Added Reviews to Details View" />
     <MESSAGE value="Using fixed layout dimens for poster Image View&#10;Using scaleType fitxy&#10;some code clean ups" />
     <MESSAGE value="some  code clean ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="some  code clean ups" />
+    <MESSAGE value="Removed Master-Detail layout from phone UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Master-Detail layout from phone UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2565,23 +2574,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="method#sortList#0;class#MoviesGridFragment#0" expanded="false" />
-            <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
-            <element signature="e#12025#12078#0" expanded="false" />
-          </folding>
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="85" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/Const.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/example/nanodegree/movieapp/fragment/MoviesGridFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15337424">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="0.63852817">
+          <caret line="162" column="71" selection-start-line="162" selection-start-column="71" selection-end-line="162" selection-end-column="71" />
+          <folding>
+            <element signature="method#sortList#0;class#MoviesGridFragment#0" expanded="false" />
+            <element signature="class#GetMoviesTask#0;class#MoviesGridFragment#0" expanded="false" />
+            <element signature="e#12136#12189#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

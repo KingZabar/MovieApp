@@ -155,8 +155,12 @@ public class MoviesGridFragment extends Fragment {
 
         Log.d(TAG, "columns --> " + columns);
 
+        if (((MainActivity) getActivity()).isDualPane()) {
+            columns = columns / 2;
+        }
+
         // use a Grid layout manager
-        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mLayoutManager = new GridLayoutManager(getActivity(), columns);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         favoritesList = Utils.getFavoriteMovies(getActivity());
